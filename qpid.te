@@ -29,6 +29,7 @@ files_pid_file(qpidd_var_run_t)
 # Local policy
 #
 
+allow qpidd_t qpidd_var_lib_t:file map;
 allow qpidd_t self:process { setsched signull };
 allow qpidd_t self:fifo_file rw_fifo_file_perms;
 allow qpidd_t self:sem create_sem_perms;
